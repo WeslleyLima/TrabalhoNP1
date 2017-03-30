@@ -41,7 +41,8 @@ public class Voo extends Compania {
     }
 
     public void setOrigem(String origem) {
-        this.origem = origem;
+        //faz o tratamento direto das 3 primeiras letras do local
+        this.origem = origem.substring(0,2);
     }
 
     public String getDestino() {
@@ -49,6 +50,7 @@ public class Voo extends Compania {
     }
 
     public void setDestino(String destino) {
-        this.destino = destino;
+        //faz o tratamento direto das 3 primeiras letras do local
+        this.destino = destino.substring(0,2);
     }
 }
