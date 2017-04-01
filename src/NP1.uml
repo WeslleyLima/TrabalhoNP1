@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="357.1550925925926" y="208.5">Tripulacao</node>
+    <node x="330.6550925925926" y="0.0">Pessoa</node>
+    <node x="1508.2450396825398" y="848.5">Economy</node>
+    <node x="1274.2450396825398" y="876.5">Business</node>
+    <node x="566.0" y="471.0">CoPiloto</node>
+    <node x="1782.2450396825398" y="876.5">FirstClass</node>
+    <node x="932.0" y="336.0">CartaoEmbarque</node>
+    <node x="247.0" y="471.0">Piloto</node>
+    <node x="368.99999999999994" y="471.0">ComissarioBordo</node>
+    <node x="742.0" y="208.5">Passageiro</node>
+    <node x="0.0" y="443.5">Compania</node>
+    <node x="1419.8158068783068" y="168.0">TipoAlimentacao</node>
+    <node x="1365.3158068783068" y="403.5">Assento</node>
+    <node x="363.739417989418" y="1208.0">AgendamentoVoo</node>
+    <node x="706.0" y="430.5">ProgramaFidelidade</node>
+    <node x="228.23941798941792" y="713.0">Voo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Voo" target="Pessoa">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Voo" target="CoPiloto">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Piloto" target="Tripulacao">
+      <point x="0.0" y="-18.5" />
+      <point x="298.0" y="311.0" />
+      <point x="379.3217592592593" y="311.0" />
+      <point x="-44.333333333333314" y="18.5" />
+    </edge>
+    <edge source="AgendamentoVoo" target="Voo">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Voo" target="Piloto">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="ProgramaFidelidade" target="Passageiro">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="Voo" target="Assento">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Assento" target="TipoAlimentacao">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Passageiro" target="Pessoa">
+      <point x="0.0" y="-18.5" />
+      <point x="809.0" y="143.0" />
+      <point x="485.6550925925926" y="143.0" />
+      <point x="62.0" y="59.0" />
+    </edge>
+    <edge source="CoPiloto" target="Tripulacao">
+      <point x="0.0" y="-18.5" />
+      <point x="626.0" y="311.0" />
+      <point x="467.9884259259259" y="311.0" />
+      <point x="44.333333333333314" y="18.5" />
+    </edge>
+    <edge source="Voo" target="CartaoEmbarque">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Voo" target="ComissarioBordo">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="ComissarioBordo" target="Tripulacao">
+      <point x="0.0" y="-18.5" />
+      <point x="457.49999999999994" y="311.0" />
+      <point x="423.6550925925926" y="311.0" />
+      <point x="0.0" y="18.5" />
+    </edge>
+    <edge source="FirstClass" target="Assento">
+      <point x="0.0" y="-59.0" />
+      <point x="1889.2450396825398" y="683.0" />
+      <point x="1615.5658068783068" y="683.0" />
+      <point x="107.25" y="86.0" />
+    </edge>
+    <edge source="Economy" target="Assento">
+      <point x="0.0" y="-87.0" />
+      <point x="1635.2450396825398" y="693.0" />
+      <point x="1544.0658068783068" y="693.0" />
+      <point x="35.75" y="86.0" />
+    </edge>
+    <edge source="Tripulacao" target="Pessoa">
+      <point x="0.0" y="-18.5" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="Voo" target="Compania">
+      <point x="-206.14285714285717" y="-222.5" />
+      <point x="262.5965608465608" y="693.0" />
+      <point x="113.0" y="693.0" />
+      <point x="0.0" y="46.0" />
+    </edge>
+    <edge source="Business" target="Assento">
+      <point x="0.0" y="-59.0" />
+      <point x="1381.2450396825398" y="693.0" />
+      <point x="1472.5658068783068" y="693.0" />
+      <point x="-35.75" y="86.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9555727554179564" x="1756.7034040066665" y="862.9370414774164" />
+  <SelectedNodes>
+    <node>Voo</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

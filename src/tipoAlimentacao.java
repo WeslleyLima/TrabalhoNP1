@@ -1,5 +1,8 @@
 /**
- * Created by thiago on 30/03/2017.
+ * Created by thiago on 01/04/2017.
  */
-public class tipoAlimentacao {
+public enum tipoAlimentacao {
+    vegetariano,regular,light;
+
+
 }
