@@ -11,7 +11,6 @@ public class Assento {
     private double comprimento;
     private boolean assentoEstado = false;
 
-
     // Construtor padrão para não ser preciso inicializar Assento dentro do construtor de firstClass
     public Assento(){
 

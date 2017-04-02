@@ -13,13 +13,16 @@ public class Voo extends Compania {
     private String horario;
     private String origem;
     private String destino;
-    private Assento assento[];
     private CartaoEmbarque cartao[];
     private Pessoa pessoa[];
     private ArrayList<Pessoa>tripulacaolist=new ArrayList<>();
     private Pessoa piloto = new Piloto();
     private Pessoa coPiloto = new CoPiloto();
     private int codigo;
+
+    FirstClass firstClass = new FirstClass(); // CRIA UMA CASSE FIRSTCLASS PARA O VOO
+    Business business = new Business();       // CRIA UMA CLASSE BUSINES PARA O VOO
+    Economy economy = new Economy();          // CRIA UMA CLASSE ECONOMY PARA O VOO
 
 
 
