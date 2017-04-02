@@ -101,7 +101,6 @@ public class AgendamentoVoo {
                             }
                             voo = voolist.get(scanner.nextInt());
                             voo.setPiloto();
-
                             break;
                         case 2:
                             System.out.println("digite o Voo a inserir tripulacao.");

@@ -65,7 +65,6 @@ public class Assento {
     public void setAssentoEstado(boolean estado){
         assentoEstado = estado;;
     }
-
     // retorna o estado do assento: se ta ocupado ou não
     public boolean getAssentoEstado(){
         return assentoEstado;

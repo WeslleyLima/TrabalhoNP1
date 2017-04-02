@@ -24,11 +24,7 @@ public class Voo extends Compania {
     Business business = new Business();       // CRIA UMA CLASSE BUSINES PARA O VOO
     Economy economy = new Economy();          // CRIA UMA CLASSE ECONOMY PARA O VOO
 
-
-
-
     //CONSTRUTOR SUPER------------------------------------------------
-
     public Voo(String ciaArea, Date data, String horario, String origem, String destino) {
         super(ciaArea);
         this.data = data;
@@ -141,6 +137,10 @@ public class Voo extends Compania {
 
             tripulacaolist.add(tripulacao);
         }
+    }
+
+    public void getVoosDisponiveis(){
+
     }
 
 
