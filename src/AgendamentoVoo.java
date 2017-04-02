@@ -58,9 +58,9 @@ public class AgendamentoVoo {
                     economy.mapaAssentos();
 
                     voolist.add(voo);
-                    voo = new Voo("GOL",new Date(2017,4,8),"14:00","BRA","JOA");
+                    voo = new Voo("GOL",new Date(2017,4,8,14,00),"BRA","JOA");
                     voolist.add(voo);
-                    voo = new Voo("AVIANCA",new Date(2017,5,1),"14:00","MAC","FOR");
+                    voo = new Voo("AVIANCA",new Date(2017,5,1,14,00),"MAC","FOR");
                     voolist.add(voo);
                     break;
                 case 'b':
