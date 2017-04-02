@@ -27,4 +27,8 @@ public class Pessoa {
     public void setId(String id) {
         this.id = id;
     }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
 }

@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by thiago on 30/03/2017.
  */
 public class AgendamentoVoo {
+    static int codigo=1;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char menu;
@@ -53,7 +54,61 @@ public class AgendamentoVoo {
                 case 'd': break;
                 case 'e': break;
                 case 'f': break;
-                case 'g': break;
+                case 'g':
+                    System.out.println("deseja incluir qual tripulação abaixo.");
+                    System.out.println("1- piloto");
+                    System.out.println("2- coPiloto");
+                    System.out.println("3- comissarios");
+                    int menuTripulacao=scanner.nextInt();
+                    switch (menuTripulacao){
+                        case 1:
+                            System.out.println("digite o Voo a inserir tripulacao.");
+                            for (Voo v:voolist) {
+
+                                System.out.printf("\ncodigo: %d |Compania %s, data: %s,horario %s ,Origem: %s, Destino %s\n",
+                                        v.getCodigo(),
+                                        v.getCiaArea(),
+                                        v.getData(),
+                                        v.getHorario(),
+                                        v.getOrigem(),
+                                        v.getDestino());
+                            }
+                            voo=voolist.get(scanner.nextInt());
+                            voo.setPiloto();
+
+                            break;
+                        case 2:
+                            System.out.println("digite o Voo a inserir tripulacao.");
+                            for (Voo v:voolist) {
+
+                                System.out.printf("\ncodigo: %d |Compania %s, data: %s,horario %s ,Origem: %s, Destino %s\n",
+                                        v.getCodigo(),
+                                        v.getCiaArea(),
+                                        v.getData(),
+                                        v.getHorario(),
+                                        v.getOrigem(),
+                                        v.getDestino());
+                            }
+                            voo=voolist.get(scanner.nextInt());
+                            voo.setCoPiloto();
+                            break;
+                        case 3:
+                            System.out.println("digite o Voo a inserir tripulacao.");
+                            for (Voo v:voolist) {
+
+                                System.out.printf("\ncodigo: %d |Compania %s, data: %s,horario %s ,Origem: %s, Destino %s\n",
+                                        v.getCodigo(),
+                                        v.getCiaArea(),
+                                        v.getData(),
+                                        v.getHorario(),
+                                        v.getOrigem(),
+                                        v.getDestino());
+                            }
+                            voo=voolist.get(scanner.nextInt());
+                            voo.setTripulacao();
+                            break;
+                    }
+                    break;
                 case 'h': break;
                 case 'i': break;
                 case 'j': break;
