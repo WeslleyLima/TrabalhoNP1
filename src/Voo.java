@@ -39,7 +39,7 @@ public class Voo extends Compania {
     //GETSETS------------------------------------------------
     public String getData() {
         String data;
-        data=String.format("%d/%d/%d",this.data.getYear(),this.data.getMonth(),this.data.getDay());
+        data = String.format("%d/%d/%d",this.data.getYear(),this.data.getMonth(),this.data.getDay());
         return data;
     }
     public int getCodigo() {
