@@ -33,13 +33,13 @@ public class FirstClass extends Assento {
 
     //metodo de cancelamento
 
-    public void CancelamentoVoo(Voo voo){
+    public void CancelamentoVoo(Voo voo) {
         double pagamento;
         boolean podeCancelar = false;
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
         String dataVoo;
-        dataVoo= voo.getData();
+        dataVoo = voo.getData();
         //variavel
 
         String dataa = dateFormat.format(date);
@@ -56,16 +56,16 @@ public class FirstClass extends Assento {
 
         //pegar do horario do voo
 
-        int anoVoo = 5 ;
+        int anoVoo = 5;
         int mesVoo = 4;
         int diaVoo = 1;
 
-        int horaVoo=13;
-        int minutoVoo=30;
+        int horaVoo = 13;
+        int minutoVoo = 30;
 
-        if(anoAtual < anoVoo){
+        if (anoAtual < anoVoo) {
             podeCancelar = false;
-        }else {
+        } else {
             if (anoAtual == anoVoo) {
                 if (mesAtual < mesVoo) {
                     podeCancelar = false;
@@ -79,34 +79,48 @@ public class FirstClass extends Assento {
                                 if (minutoVoo <= 0) {
                                     horaVoo--;
                                     minutoVoo = 60 + minutoVoo;
-                                }
+
+                                    if (horaVoo == 0 && minutoVoo < 30) {
+                                        diaVoo--;
+                                        horaVoo = 23;
+                                        minutoVoo = 60 - minutoVoo;
+                                        if (diaVoo == 0) {
+                                            diaVoo = 31;
+                                            mesVoo--;
+                                            if (mesVoo == 0) {
+                                                mesVoo = 12;
+                                                anoVoo--;
+                                            }
+                                        }
+                                    }
 
 
-                                if (horaAtual < horaVoo) {
-                                    podeCancelar = true;
-                                } else {
-                                    if (horaAtual == horaVoo && minutoAtual < minutoVoo) {
+                                    if (horaAtual < horaVoo) {
                                         podeCancelar = true;
                                     } else {
-                                        podeCancelar = false;
+                                        if (horaAtual == horaVoo && minutoAtual < minutoVoo) {
+                                            podeCancelar = true;
+                                        } else {
+                                            podeCancelar = false;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+
+
             }
 
 
+            if (podeCancelar == true) {
+                pagamento = preco * taxaCancelamento;
+            } else {
+                System.out.println("Não pode cancelar");
+            }
+
         }
-
-
-        if(podeCancelar == true){
-            pagamento = preco * taxaCancelamento;
-        }else{
-            System.out.println("Não pode cancelar");
-        }
-
     }
 
     // cancela assento que havia sido reservado

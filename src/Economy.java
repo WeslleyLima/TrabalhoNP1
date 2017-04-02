@@ -80,25 +80,39 @@ public class Economy extends Assento {
                                 if (minutoVoo <= 0) {
                                     horaVoo--;
                                     minutoVoo = 60 + minutoVoo;
-                                }
+
+                                    if (horaVoo == 0 && minutoVoo < 30) {
+                                        diaVoo--;
+                                        horaVoo = 23;
+                                        minutoVoo = 60 - minutoVoo;
+                                        if (diaVoo == 0) {
+                                            diaVoo = 31;
+                                            mesVoo--;
+                                            if (mesVoo == 0) {
+                                                mesVoo = 12;
+                                                anoVoo--;
+                                            }
+                                        }
+                                    }
 
 
-                                if (horaAtual < horaVoo) {
-                                    podeCancelar = true;
-                                } else {
-                                    if (horaAtual == horaVoo && minutoAtual < minutoVoo) {
+                                    if (horaAtual < horaVoo) {
                                         podeCancelar = true;
                                     } else {
-                                        podeCancelar = false;
+                                        if (horaAtual == horaVoo && minutoAtual < minutoVoo) {
+                                            podeCancelar = true;
+                                        } else {
+                                            podeCancelar = false;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
+
+
             }
-
-
         }
 
 
