@@ -25,7 +25,7 @@ public class Voo extends Compania {
     Economy economy = new Economy();          // CRIA UMA CLASSE ECONOMY PARA O VOO
 
     //CONSTRUTOR SUPER------------------------------------------------
-    public Voo(String ciaArea, Date data, String horario, String origem, String destino) {
+    public Voo(String ciaArea, Date data, String origem, String destino) {
         super(ciaArea);
         this.data = data;
         this.horario = horario;
