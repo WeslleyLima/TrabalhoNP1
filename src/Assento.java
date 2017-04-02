@@ -4,28 +4,38 @@
 public class Assento {
 
     //ATRIBUTOS---------------------------------
-    private int num;
-    private char fileira;
+    private int fileira;
+    private char coluna;
     private tipoAlimentacao alimentacao;
     private double largura;
     private double comprimento;
+    private boolean assentoEstado = false;
 
-    //GETSETS------------------------------------------------
+
+    // Construtor padrão para não ser preciso inicializar Assento dentro do construtor de firstClass
+    public Assento(){
+
+    }
+
+    public Assento(int fileira, char coluna){
+        this.fileira = fileira;
+        this.coluna = coluna;
+    }
 
     public int getNum() {
-        return num;
-    }
-
-    public void setNum(int num) {
-        this.num = num;
-    }
-
-    public char getFileira() {
         return fileira;
     }
 
+    public void setNum(int num) {
+        this.fileira = num;
+    }
+
+    public char getFileira() {
+        return coluna;
+    }
+
     public void setFileira(char fileira) {
-        this.fileira = fileira;
+        this.coluna = fileira;
     }
 
     public tipoAlimentacao getAlimentacao() {
@@ -52,5 +62,13 @@ public class Assento {
         this.comprimento = comprimento;
     }
 
-    //TODO: DESENVOLVER METODOS  se APLICADO
+    // reserva ou cancela um assento
+    public void setAssentoEstado(boolean estado){
+        assentoEstado = estado;;
+    }
+
+    // retorna o estado do assento: se ta ocupado ou não
+    public boolean getAssentoEstado(){
+        return assentoEstado;
+    }
 }
