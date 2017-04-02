@@ -29,6 +29,29 @@ public class AgendamentoVoo {
                 case 'a':
 
                     Voo voo = new Voo("TAM",new Date(2017,9,25),"16:30","FOR","SAO");
+                    voolist.add(voo);
+                    voo = new Voo("GOL",new Date(2017,4,8),"14:00","BRA","JOA");
+                    voolist.add(voo);
+                    voo = new Voo("AVIANCA",new Date(2017,5,1),"14:00","MAC","FOR");
+                    voolist.add(voo);
+                    break;
+                case 'b':
+                    System.out.println("Voo's disponiveis");
+                    for (Voo v:voolist) {
+
+                        System.out.printf("\nCompania %s, data: %s,horario %s ,Origem: %s, Destino %s\n",
+                                v.getCiaArea(),
+                                v.getData(),
+                                v.getHorario(),
+                                v.getOrigem(),
+                                v.getDestino());
+                    }
+
+                    break;
+                case 'c':
+
+                    break;
+                case 'd':
 
                     // TESTE DA CLASSE ASSENTO E SUAS SUB CLASSES
                     FirstClass fistClass = new FirstClass();
@@ -56,30 +79,8 @@ public class AgendamentoVoo {
                     economy.mapaAssentos();
                     economy.cancelAssento(12, 'A');
                     economy.mapaAssentos();
-
-                    voolist.add(voo);
-                    voo = new Voo("GOL",new Date(2017,4,8),"14:00","BRA","JOA");
-                    voolist.add(voo);
-                    voo = new Voo("AVIANCA",new Date(2017,5,1),"14:00","MAC","FOR");
-                    voolist.add(voo);
                     break;
-                case 'b':
-                    System.out.println("Voo's disponiveis");
-                    for (Voo v:voolist) {
 
-                        System.out.printf("\nCompania %s, data: %s,horario %s ,Origem: %s, Destino %s\n",
-                                v.getCiaArea(),
-                                v.getData(),
-                                v.getHorario(),
-                                v.getOrigem(),
-                                v.getDestino());
-                    }
-
-                    break;
-                case 'c':
-
-                    break;
-                case 'd': break;
                 case 'e': break;
                 case 'f': break;
                 case 'g':

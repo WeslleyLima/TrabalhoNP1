@@ -145,7 +145,7 @@ public class Business extends Assento {
             System.out.println();
 
         }
-        System.out.print("\nLegada: X - Ocupado / Y - Livre\n");
+        System.out.print("\nLegenda: X - Ocupado / Y - Livre\n");
         System.out.println();
     }
 }
