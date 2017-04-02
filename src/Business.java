@@ -11,6 +11,7 @@ public class Business extends Assento {
     private double preco;
     private double taxaCancelamento;
     private int prioridade;
+    private Assento assentosBusiness[][] = new Assento[8][4];
 
     //construtor personalisado
 
@@ -18,17 +19,25 @@ public class Business extends Assento {
         this.preco = preco;
         this.taxaCancelamento = 0.7;
         this.prioridade = 2;
+
+        // Inicializa matriz de assentos
+        char assentoLetra = 'A';
+        for (int fila = 0; fila < assentosBusiness.length; fila++) {
+            for (int coluna = 0; coluna < assentosBusiness[fila].length; coluna++) {
+                assentosBusiness[fila][coluna] = new Assento(fila, assentoLetra);
+                assentoLetra++;
+            }
+        }
     }
 
     //metodo de cancelamento
-
     public void CancelamentoVoo(Voo voo){
         double pagamento;
         boolean podeCancelar = false;
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
-        Date dataVoo;
-        dataVoo= voo.getData();
+        String dataVoo;
+        dataVoo = voo.getData();
         //variavel
 
         String dataa = dateFormat.format(date);
@@ -96,5 +105,33 @@ public class Business extends Assento {
             System.out.println("Não pode cancelar");
         }
 
+    }
+
+    // cancela assento que havia sido reservado
+    public void cancelAssento(int fila, char coluna){
+        assentosBusiness[fila - 4][coluna - 'A'].setAssentoEstado(false);
+    }
+    // reserva assento desejado
+    public void setAssentosBusiness(int fila, char coluna) {
+        assentosBusiness[fila - 4][coluna - 'A'].setAssentoEstado(true);
+    }
+    // imprime mapa de assentos
+    public void mapaAssentos(){
+        System.out.printf("%n%40s%n", "MAPA CLASSE BUSINESS");
+        System.out.printf("%16s%9s%9s%9s%n", "A", "B", "C", "D");
+
+        for (int fileira = 0; fileira < assentosBusiness.length; fileira++){
+            System.out.printf("Fila #%-8d ", fileira + 4);
+            for (int coluna = 0; coluna < assentosBusiness[fileira].length; coluna++) {
+                if (assentosBusiness[fileira][coluna].getAssentoEstado())
+                    System.out.printf("%-8s ", "X ");
+                else
+                    System.out.printf("%-8s ", "O ");
+            }
+            System.out.println();
+
+        }
+        System.out.print("\nLegada: X - Ocupado / Y - Livre\n");
+        System.out.println();
     }
 }
