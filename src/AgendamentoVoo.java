@@ -28,7 +28,7 @@ public class AgendamentoVoo {
             switch (menu) {
                 case 'a':
 
-                    Voo voo = new Voo("TAM",new Date(2017,9,25),"16:30","FOR","SAO");
+                    Voo voo = new Voo("TAM",new Date(2017,9,25,16,30),"FOR","SAO");
 
                     // TESTE DA CLASSE ASSENTO E SUAS SUB CLASSES
                     FirstClass fistClass = new FirstClass();
@@ -58,9 +58,9 @@ public class AgendamentoVoo {
                     economy.mapaAssentos();
 
                     voolist.add(voo);
-                    voo = new Voo("GOL",new Date(2017,4,8),"14:00","BRA","JOA");
+                    voo = new Voo("GOL",new Date(2017,4,8,14,00),"BRA","JOA");
                     voolist.add(voo);
-                    voo = new Voo("AVIANCA",new Date(2017,5,1),"14:00","MAC","FOR");
+                    voo = new Voo("AVIANCA",new Date(2017,5,1,14,00),"MAC","FOR");
                     voolist.add(voo);
                     break;
                 case 'b':
@@ -103,7 +103,6 @@ public class AgendamentoVoo {
                             }
                             voo=voolist.get(scanner.nextInt());
                             voo.setPiloto();
-
                             break;
                         case 2:
                             System.out.println("digite o Voo a inserir tripulacao.");

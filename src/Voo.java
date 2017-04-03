@@ -13,7 +13,6 @@ public class Voo extends Compania {
     private String horario;
     private String origem;
     private String destino;
-    private Assento assento[];
     private CartaoEmbarque cartao[];
     private Pessoa pessoa[];
     private ArrayList<Pessoa>tripulacaolist=new ArrayList<>();
@@ -21,12 +20,12 @@ public class Voo extends Compania {
     private Pessoa coPiloto = new CoPiloto();
     private int codigo;
 
-
-
+    FirstClass firstClass = new FirstClass(); // CRIA UMA CASSE FIRSTCLASS PARA O VOO
+    Business business = new Business();       // CRIA UMA CLASSE BUSINES PARA O VOO
+    Economy economy = new Economy();          // CRIA UMA CLASSE ECONOMY PARA O VOO
 
     //CONSTRUTOR SUPER------------------------------------------------
-
-    public Voo(String ciaArea, Date data, String horario, String origem, String destino) {
+    public Voo(String ciaArea, Date data, String origem, String destino) {
         super(ciaArea);
         this.data = data;
         this.horario = horario;
@@ -138,6 +137,10 @@ public class Voo extends Compania {
 
             tripulacaolist.add(tripulacao);
         }
+    }
+
+    public void getVoosDisponiveis(){
+
     }
 
 

@@ -11,7 +11,6 @@ public class Assento {
     private double comprimento;
     private boolean assentoEstado = false;
 
-
     // Construtor padrão para não ser preciso inicializar Assento dentro do construtor de firstClass
     public Assento(){
 
@@ -66,7 +65,6 @@ public class Assento {
     public void setAssentoEstado(boolean estado){
         assentoEstado = estado;;
     }
-
     // retorna o estado do assento: se ta ocupado ou não
     public boolean getAssentoEstado(){
         return assentoEstado;
